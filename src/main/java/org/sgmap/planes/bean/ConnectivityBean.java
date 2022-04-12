@@ -8,7 +8,6 @@ public class ConnectivityBean {
     private Logger log = LoggerFactory.getLogger(ConnectivityBean.class);
     private static ConnectivityBean instance = null;
 
-    private int bodySize = 0;
     private long lastPing = 0;
 
     public synchronized static ConnectivityBean getInstance() {
@@ -16,10 +15,6 @@ public class ConnectivityBean {
             instance = new ConnectivityBean();
         }
         return instance;
-    }
-
-    public int getDataSize(){
-        return bodySize;
     }
 
     public void ping(){

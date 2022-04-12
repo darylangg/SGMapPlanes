@@ -1,17 +1,13 @@
 package org.sgmap.planes.bean;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.google.protobuf.util.JsonFormat;
 import org.apache.camel.Exchange;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.sgmap.common.protobuf.GeoJSONProto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Array;
-import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -20,7 +16,6 @@ public class DataBean {
     private Logger log = LoggerFactory.getLogger(DataBean.class);
     private static DataBean instance = null;
     private static boolean poll = true;
-    private static GeoJSONProto.Data latestData = null;
 
     public synchronized static DataBean getInstance() {
         if (instance == null) {
@@ -95,12 +90,6 @@ public class DataBean {
                         .setFeatureCollection(newCollection))
                 .build();
 
-//        System.out.println(JsonFormat.printer().print(retProto));
-        latestData = retProto;
         return retProto.toByteArray();
-    }
-
-    public GeoJSONProto.Data getData(){
-        return latestData;
     }
 }
