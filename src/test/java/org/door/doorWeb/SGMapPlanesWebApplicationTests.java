@@ -10,11 +10,9 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class SGMapPlanesApplicationTests {
+class SGMapPlanesWebApplicationTests {
 
 	@Test
 	void readJSON() throws JSONException, IOException {
-		ArrayList<String> doors = DoorStatusBean.getValidDoors("data.json");
-		assertTrue(doors instanceof ArrayList);
 	}
 }

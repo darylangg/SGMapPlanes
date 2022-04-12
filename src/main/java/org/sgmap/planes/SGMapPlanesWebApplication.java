@@ -1,4 +1,4 @@
-package org.door.doorWeb;
+package org.sgmap.planes;
 
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import org.springframework.boot.SpringApplication;
@@ -8,10 +8,10 @@ import org.springframework.context.annotation.PropertySource;
 @SpringBootApplication
 @EnableEncryptableProperties
 @PropertySource(name="EncryptedProperties", value = "classpath:encrypted.properties")
-public class SGMapPlanesApplication {
+public class SGMapPlanesWebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SGMapPlanesApplication.class, args);
+		SpringApplication.run(SGMapPlanesWebApplication.class, args);
 	}
 
 }

@@ -1,6 +1,6 @@
 package org.sgmap.planes.configuration;
 
-import org.door.common.utilities.Util;
+import org.sgmap.common.utilities.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,34 +12,34 @@ import javax.net.ssl.SSLSocketFactory;
 
 @Configuration
 public class RabbitMQConfig {
-    @Value("${door.amqp.web.router.user}")
+    @Value("${planes.amqp.web.router.user}")
     public String username;
 
-    @Value("${door.amqp.web.router.password}")
+    @Value("${planes.amqp.web.router.password}")
     public String password;
 
-    @Value("${door.amqp.web.router.host}")
+    @Value("${planes.amqp.web.router.host}")
     public String host;
 
-    @Value("${door.amqp.web.router.port}")
+    @Value("${planes.amqp.web.router.port}")
     public Integer port;
 
-    @Value("${door.amqp.web.router.useSSL}")
+    @Value("${planes.amqp.web.router.useSSL}")
     protected boolean webUseSSL;
 
-    @Value("${door.amqp.web.router.ssl_ca}")
+    @Value("${planes.amqp.web.router.ssl_ca}")
     protected String caPathWeb;
 
-    @Value("${door.amqp.web.router.ssl_cert}")
+    @Value("${planes.amqp.web.router.ssl_cert}")
     protected String certPathWeb;
 
-    @Value("${door.amqp.web.router.ssl_key}")
+    @Value("${planes.amqp.web.router.ssl_key}")
     protected String keyPathWeb;
 
-    @Value("${door.amqp.web.router.ssl_keyPassword}")
+    @Value("${planes.amqp.web.router.ssl_keyPassword}")
     protected String keyPWWeb;
 
-    @Value("${door.amqp.app.max_channel}")
+    @Value("${planes.amqp.app.max_channel}")
     protected String maxChannel;
 
     @Bean

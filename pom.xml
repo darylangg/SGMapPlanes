@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.sgmap</groupId>
-	<artifactId>SGMapPlanes</artifactId>
+	<artifactId>SGMapPlanesWeb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sgmapplanes</name>
 	<description>SG Map Application for Planes</description>
@@ -116,7 +116,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>org.door.doorWeb.SGMapPlanesApplication</mainClass>
+							<mainClass>org.sgmap.planes.SGMapPlanesWebApplication</mainClass>
 						</manifest>
 						<manifestEntries>
 							<Class-Path>.</Class-Path>
@@ -130,7 +130,7 @@
 				<executions>
 					<execution>
 						<configuration>
-							<mainClass>org.door.doorWeb.SGMapPlanesApplication</mainClass>
+							<mainClass>org.sgmap.planes.SGMapPlanesWebApplication</mainClass>
 						</configuration>
 					</execution>
 				</executions>

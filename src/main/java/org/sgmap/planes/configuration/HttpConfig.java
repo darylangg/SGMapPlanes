@@ -1,7 +1,7 @@
 package org.sgmap.planes.configuration;
 
 import org.apache.camel.component.http.HttpClientConfigurer;
-import org.door.common.utilities.SelfSignedHttpClientConfigurer;
+import org.sgmap.common.utilities.SelfSignedHttpClientConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
